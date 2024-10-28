@@ -1,115 +1,116 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import React from 'react';
+import { Linkedin, Mail, ArrowRight, ExternalLink } from 'lucide-react';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const Website = () => {
+  const projects = [
+    { 
+      name: "Startup Idea Finder", 
+      description: "Find your next startup idea", 
+      link: "https://startup-idea-finder.vercel.app/" 
+    },
+    { 
+      name: "DAO Voting 4 Dummies", 
+      description: "Simplified DAO voting interface", 
+      link: "https://dummy-dao-voting.vercel.app/" 
+    }
+  ];
 
-export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-slate-50 p-8">
+      <div className="max-w-4xl mx-auto">
+        <header className="mb-16">
+          <h1 className="text-4xl font-bold mb-4">Maggie Byrne</h1>
+          <p className="text-xl text-slate-600">Founder. Investor. Builder.</p>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="prose max-w-none mb-16">
+          <p className="text-lg">
+            Hey! 👋
+          </p>
+          
+          <div className="flex space-x-4 mt-6">
+            <a href="https://www.linkedin.com/in/maggieelizabethbyrne/" className="text-blue-600 hover:text-blue-800 flex items-center">
+              <Linkedin className="w-5 h-5 mr-2" /> LinkedIn
+            </a>
+            <a href="https://maggiebyrne.substack.com/" className="text-blue-600 hover:text-blue-800 flex items-center">
+              <ExternalLink className="w-5 h-5 mr-2" /> Substack
+            </a>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold mb-4">Right now I'm...</h2>
+          <ul className="list-disc list-inside space-y-2 text-lg text-slate-700">
+            <li>Taking a "break" from school</li>
+            <li>Building a platform to make Web 3 accessible through no-code dev tools</li>
+            <li>Teaching personal finance to high schoolers</li>
+            <li>Researching Web3 vesting schedules (more interesting than it sounds!)</li>
+            <li>Connecting early founders with investors</li>
+            <li>Taking really long walks with good podcasts</li>
+            <li>Learning as much as I can</li>
+          </ul>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold mb-4">Past stuff:</h2>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <ul className="space-y-3 text-slate-700">
+              <li>🔍 Analyst at RevTech Labs + Newlin Ventures (sourced deals, helped founders to the best of my ability, and got the crazy opportunity to support a portfolio that raised $2.5 B in venture capital and created over 1,200 jobs)</li>
+              <li>💼 Business Development @ Sonen Capital (qualified $MM leads)</li>
+              <li>🚀 Founded & sold a platform connecting students with local mentors (built something I wanted)</li>
+              <li>📱 Created Dyslexia Scanner app (didn't really work)</li>
+              <li>💫 BD at Vosyn ($2M funding secured)</li>
+              <li>🎓 Research Assistant @ UO (made sense of university admissions data)</li>
+              <li>👥 Board President @ Assisteens (community service FTW)</li>
+              <li>📚 Marketing + Sales @ Breakout Learning (got 75+ professors on board)</li>
+              <li>🏠 Advisory Board Member @ UO Housing (made dorm life better)</li>
+              <li>📊 Analyst @ UO Real Estate Investment Group (crunched numbers)</li>
+              <li>🎯 Branding Lead @ IDB Ventures (made things look good)</li>
+              <li>🤖 Advisory Board Member to the Dean on AI (because future)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold mb-4">When I'm not working...</h2>
+          <p className="text-lg text-slate-700">
+            You'll find me lifting weights 🏋️‍♀️, cruising in my old Bronco 🛻, hiking new trails 🥾, or on my ideal 12-hour walk 
+            (yes, really). Also, I'm always down to walk dogs 🐕 — seriously, hit me up if you need a dog walker!
+          </p>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold mb-6">A Few of the Things I've Built for Fun:</h2>
+          <div className="grid gap-4">
+            {projects.map((project, index) => (
+              <a 
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div>
+                  <h3 className="font-semibold text-lg">{project.name}</h3>
+                  <p className="text-slate-600">{project.description}</p>
+                </div>
+                <ExternalLink className="w-5 h-5 text-slate-400" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <a 
+            href="mailto:maggiebyrne78@gmail.com" 
+            className="mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center inline-flex"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Say Hi <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
-}
+};
+
+export default Website;

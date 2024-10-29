@@ -1,3 +1,4 @@
+cat > pages/index.js << 'EOL'
 import React from 'react';
 import { Linkedin, Mail, ArrowRight, ExternalLink } from 'lucide-react';
 
@@ -19,12 +20,12 @@ const Website = () => {
     <div className="min-h-screen bg-slate-50 p-8">
       <div className="max-w-4xl mx-auto">
         <header className="mb-16">
-          <h1 className="text-4xl font-bold mb-4">Maggie Byrne</h1>
-          <p className="text-xl text-slate-600">Founder. Investor. Builder.</p>
+          <h1 className="text-4xl font-bold mb-4 text-black">Maggie Byrne</h1>
+          <p className="text-xl text-slate-800">Founder. Investor. Builder.</p>
         </header>
 
         <div className="prose max-w-none mb-16">
-          <p className="text-lg">
+          <p className="text-lg text-black">
             Hey! 👋
           </p>
           
@@ -39,7 +40,7 @@ const Website = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-4">Right now I'm...</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-black">Right now I'm...</h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-slate-700">
             <li>Taking a "break" from school</li>
             <li>Building a platform to make Web 3 accessible through no-code dev tools</li>
@@ -52,7 +53,7 @@ const Website = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-4">Past stuff:</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-black">Past stuff:</h2>
           <div className="bg-white rounded-lg p-6 shadow-sm">
             <ul className="space-y-3 text-slate-700">
               <li>🔍 Analyst at RevTech Labs + Newlin Ventures (sourced deals, helped founders to the best of my ability, and got the crazy opportunity to support a portfolio that raised $2.5 B in venture capital and created over 1,200 jobs)</li>
@@ -72,7 +73,7 @@ const Website = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-4">When I'm not working...</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-black">When I'm not working...</h2>
           <p className="text-lg text-slate-700">
             You'll find me lifting weights 🏋️‍♀️, cruising in my old Bronco 🛻, hiking new trails 🥾, or on my ideal 12-hour walk 
             (yes, really). Also, I'm always down to walk dogs 🐕 — seriously, hit me up if you need a dog walker!
@@ -80,7 +81,7 @@ const Website = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6">A Few of the Things I've Built for Fun:</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-black">A Few of the Things I've Built for Fun:</h2>
           <div className="grid gap-4">
             {projects.map((project, index) => (
               <a 
@@ -91,7 +92,7 @@ const Website = () => {
                 className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <div>
-                  <h3 className="font-semibold text-lg">{project.name}</h3>
+                  <h3 className="font-semibold text-lg text-black">{project.name}</h3>
                   <p className="text-slate-600">{project.description}</p>
                 </div>
                 <ExternalLink className="w-5 h-5 text-slate-400" />
@@ -114,3 +115,4 @@ const Website = () => {
 };
 
 export default Website;
+EOL

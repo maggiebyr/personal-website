@@ -1,6 +1,5 @@
-cat > pages/index.js << 'EOL'
-import React from 'react';
-import { Linkedin, Mail, ArrowRight, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Linkedin, Mail, ArrowRight, ExternalLink } from "lucide-react";
 
 const Website = () => {
   const projects = [
@@ -115,4 +114,3 @@ const Website = () => {
 };
 
 export default Website;
-EOL

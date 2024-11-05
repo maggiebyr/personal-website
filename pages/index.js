@@ -2,19 +2,6 @@ import React from "react";
 import { Linkedin, Mail, ArrowRight, ExternalLink } from "lucide-react";
 
 const Website = () => {
-  const projects = [
-    { 
-      name: "Startup Idea Finder", 
-      description: "Find your next startup idea", 
-      link: "https://startup-idea-finder.vercel.app/" 
-    },
-    { 
-      name: "DAO Voting 4 Dummies", 
-      description: "Simplified DAO voting interface", 
-      link: "https://dummy-dao-voting.vercel.app/" 
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-slate-50 p-8">
       <div className="max-w-4xl mx-auto">
@@ -42,8 +29,8 @@ const Website = () => {
           <h2 className="text-2xl font-semibold mb-4 text-black">Right now I'm...</h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-slate-700">
             <li>Taking a "break" from school</li>
-            <li>Building a platform to make Web 3 accessible through no-code dev tools</li>
-            <li>Teaching personal finance to high schoolers</li>
+            <li>Building a platform to make Web 3 interoperable and accessible: <a href="https://www.notion.so/UCCI-Update-Journal-1358868aa5c58045b9c9e22d48715ee3" className="text-blue-600 hover:text-blue-800">Updates here</a></li>
+            <li>Funding ambitious young builders projects through micro grants via my org <a href="http://youngbuildersociety.com/" className="text-blue-600 hover:text-blue-800">young builders society</a></li>
             <li>Researching Web3 vesting schedules (more interesting than it sounds!)</li>
             <li>Connecting early founders with investors</li>
             <li>Taking really long walks with good podcasts</li>
@@ -77,27 +64,6 @@ const Website = () => {
             You'll find me lifting weights 🏋️‍♀️, cruising in my old Bronco 🛻, hiking new trails 🥾, or on my ideal 12-hour walk 
             (yes, really). Also, I'm always down to walk dogs 🐕 — seriously, hit me up if you need a dog walker!
           </p>
-        </div>
-
-        <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-black">A Few of the Things I've Built for Fun:</h2>
-          <div className="grid gap-4">
-            {projects.map((project, index) => (
-              <a 
-                key={index}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div>
-                  <h3 className="font-semibold text-lg text-black">{project.name}</h3>
-                  <p className="text-slate-600">{project.description}</p>
-                </div>
-                <ExternalLink className="w-5 h-5 text-slate-400" />
-              </a>
-            ))}
-          </div>
         </div>
 
         <div className="mt-16">
